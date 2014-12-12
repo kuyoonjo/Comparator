@@ -1,0 +1,1295 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'exec-sync' ]
+2 info using npm@2.1.11
+3 info using node@v0.10.33
+4 warn package.json comparator@0.0.1 No description
+5 warn package.json comparator@0.0.1 No repository field.
+6 warn package.json comparator@0.0.1 No README data
+7 silly cache add args [ 'exec-sync', null ]
+8 verbose cache add spec exec-sync
+9 silly cache add parsed spec { raw: 'exec-sync',
+9 silly cache add   scope: null,
+9 silly cache add   name: 'exec-sync',
+9 silly cache add   rawSpec: '',
+9 silly cache add   spec: '*',
+9 silly cache add   type: 'range' }
+10 verbose addNamed exec-sync@*
+11 silly addNamed semver.valid null
+12 silly addNamed semver.validRange *
+13 silly addNameRange { name: 'exec-sync', range: '*', hasData: false }
+14 silly mapToRegistry name exec-sync
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/exec-sync
+18 verbose addNameRange registry:https://registry.npmjs.org/exec-sync not in flight; fetching
+19 verbose request uri https://registry.npmjs.org/exec-sync
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 13:52:35
+22 verbose request id 0fc9b0a80b038369
+23 verbose etag "UGPQ60Z6MZC7PSKOMA8VHP3D"
+24 http request GET https://registry.npmjs.org/exec-sync
+25 http 304 https://registry.npmjs.org/exec-sync
+26 silly get cb [ 304,
+26 silly get   { date: 'Sun, 07 Dec 2014 13:52:35 GMT',
+26 silly get     server: 'Apache',
+26 silly get     via: '1.1 varnish',
+26 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:35 GMT',
+26 silly get     'cache-control': 'max-age=60',
+26 silly get     etag: '"UGPQ60Z6MZC7PSKOMA8VHP3D"',
+26 silly get     age: '0',
+26 silly get     'x-served-by': 'cache-lcy1124-LCY',
+26 silly get     'x-cache': 'MISS',
+26 silly get     'x-cache-hits': '0',
+26 silly get     'x-timer': 'S1417960355.280167,VS0,VE628',
+26 silly get     vary: 'Accept',
+26 silly get     'content-length': '0',
+26 silly get     'keep-alive': 'timeout=10, max=50',
+26 silly get     connection: 'Keep-Alive' } ]
+27 verbose etag https://registry.npmjs.org/exec-sync from cache
+28 silly addNameRange number 2 { name: 'exec-sync', range: '*', hasData: true }
+29 silly addNameRange versions [ 'exec-sync',
+29 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.1.6' ] ]
+30 verbose addNamed exec-sync@0.1.6
+31 silly addNamed semver.valid 0.1.6
+32 silly addNamed semver.validRange 0.1.6
+33 silly cache afterAdd exec-sync@0.1.6
+34 verbose afterAdd /Users/yuchen/.npm/exec-sync/0.1.6/package/package.json not in flight; writing
+35 verbose afterAdd /Users/yuchen/.npm/exec-sync/0.1.6/package/package.json written
+36 silly install resolved [ { name: 'exec-sync',
+36 silly install resolved     version: '0.1.6',
+36 silly install resolved     description: 'Execute shell command synchronously. Use this for migration scripts, cli programs, but not for regular server code.',
+36 silly install resolved     keywords: [ 'exec', 'sync', 'synchronously', 'synchronous', 'shell' ],
+36 silly install resolved     author: { name: 'Jeremy Faivre', email: 'contact@jeremyfa.com' },
+36 silly install resolved     main: './bin/index.js',
+36 silly install resolved     dependencies: { ffi: '=1.2.5' },
+36 silly install resolved     devDependencies: { 'coffee-script': '>=1.2.0', findit: '>=0.1.2' },
+36 silly install resolved     repository:
+36 silly install resolved      { type: 'git',
+36 silly install resolved        url: 'git://github.com/jeremyfa/node-exec-sync.git' },
+36 silly install resolved     readme: '# exec-sync\n\nExecute shell command synchronously. Use this for migration scripts, cli programs, but not for regular server code.\n\n## Installation\n\n### Installing npm (node package manager)\n``` bash\n$ curl http://npmjs.org/install.sh | sh\n```\n\n### Installing exec-sync\n``` bash\n$ cd /path/to/your/project\n$ [sudo] npm install exec-sync\n```\n\n### Using exec-sync from node.js\nWarning: use only for special operation or command line scripts written with node. Don\'t use this for regular server code or it will ruin the responsiveness of your server.\n\n``` js\nvar execSync = require(\'exec-sync\');\n\nvar user = execSync(\'echo $USER\');\nconsole.log(user);\n```\n\nBy default, an Error is thrown if stderr is not empty. Alternatively, the function can return an object with both `stdout` and `stderr` as properties by passing `true` as a second argument (`returnOutAndErr`).\n\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011-2012 Jérémy Faivre &lt;contact@jeremyfa.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+36 silly install resolved     readmeFilename: 'README.md',
+36 silly install resolved     _id: 'exec-sync@0.1.6',
+36 silly install resolved     dist:
+36 silly install resolved      { shasum: '817a1d4a6b5b2820d72d7536ca167b2bee7259b0',
+36 silly install resolved        tarball: 'http://registry.npmjs.org/exec-sync/-/exec-sync-0.1.6.tgz' },
+36 silly install resolved     _from: 'exec-sync@*',
+36 silly install resolved     _npmVersion: '1.2.17',
+36 silly install resolved     _npmUser: { name: 'jeremyfa', email: 'contact@jeremyfa.com' },
+36 silly install resolved     maintainers: [ [Object] ],
+36 silly install resolved     directories: {},
+36 silly install resolved     _shasum: '817a1d4a6b5b2820d72d7536ca167b2bee7259b0',
+36 silly install resolved     _resolved: 'https://registry.npmjs.org/exec-sync/-/exec-sync-0.1.6.tgz',
+36 silly install resolved     bugs: { url: 'https://github.com/jeremyfa/node-exec-sync/issues' },
+36 silly install resolved     homepage: 'https://github.com/jeremyfa/node-exec-sync' } ]
+37 info install exec-sync@0.1.6 into /Users/yuchen/IdeaProjects/Comparator
+38 info installOne exec-sync@0.1.6
+39 verbose installOne of exec-sync to /Users/yuchen/IdeaProjects/Comparator not in flight; installing
+40 verbose lock using /Users/yuchen/.npm/_locks/exec-sync-e22e317252d1962c.lock for /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+41 silly install write writing exec-sync 0.1.6 to /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+42 silly cache addNamed cb exec-sync@0.1.6
+43 verbose unbuild node_modules/exec-sync
+44 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+45 verbose tar unpack /Users/yuchen/.npm/exec-sync/0.1.6/package.tgz
+46 verbose tar unpacking to /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+47 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 silly gunzTarPerm extractEntry package.json
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm extractEntry README.md
+52 silly gunzTarPerm extractEntry Cakefile
+53 silly gunzTarPerm extractEntry bin/index.js
+54 silly gunzTarPerm extractEntry src/README.md
+55 silly gunzTarPerm extractEntry src/index.coffee
+56 info preinstall exec-sync@0.1.6
+57 silly prepareForInstallMany adding ffi@=1.2.5 from exec-sync dependencies
+58 silly cache add args [ 'ffi@=1.2.5', null ]
+59 verbose cache add spec ffi@=1.2.5
+60 silly cache add parsed spec { raw: 'ffi@=1.2.5',
+60 silly cache add   scope: null,
+60 silly cache add   name: 'ffi',
+60 silly cache add   rawSpec: '=1.2.5',
+60 silly cache add   spec: '1.2.5',
+60 silly cache add   type: 'version' }
+61 verbose addNamed ffi@1.2.5
+62 silly addNamed semver.valid 1.2.5
+63 silly addNamed semver.validRange 1.2.5
+64 silly mapToRegistry name ffi
+65 silly mapToRegistry using default registry
+66 silly mapToRegistry registry https://registry.npmjs.org/
+67 silly mapToRegistry uri https://registry.npmjs.org/ffi
+68 verbose addNameVersion registry:https://registry.npmjs.org/ffi not in flight; fetching
+69 verbose request uri https://registry.npmjs.org/ffi
+70 verbose request no auth needed
+71 info attempt registry request try #1 at 13:52:36
+72 verbose etag "E7DFM5H58FTSU0GQSP5SNAYCO"
+73 http request GET https://registry.npmjs.org/ffi
+74 http 304 https://registry.npmjs.org/ffi
+75 silly get cb [ 304,
+75 silly get   { date: 'Sun, 07 Dec 2014 13:52:36 GMT',
+75 silly get     server: 'Apache',
+75 silly get     via: '1.1 varnish',
+75 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:36 GMT',
+75 silly get     'cache-control': 'max-age=60',
+75 silly get     etag: '"E7DFM5H58FTSU0GQSP5SNAYCO"',
+75 silly get     age: '0',
+75 silly get     'x-served-by': 'cache-lcy1133-LCY',
+75 silly get     'x-cache': 'MISS',
+75 silly get     'x-cache-hits': '0',
+75 silly get     'x-timer': 'S1417960356.104733,VS0,VE349',
+75 silly get     vary: 'Accept',
+75 silly get     'content-length': '0',
+75 silly get     'keep-alive': 'timeout=10, max=50',
+75 silly get     connection: 'Keep-Alive' } ]
+76 verbose etag https://registry.npmjs.org/ffi from cache
+77 silly cache afterAdd ffi@1.2.5
+78 verbose afterAdd /Users/yuchen/.npm/ffi/1.2.5/package/package.json not in flight; writing
+79 verbose afterAdd /Users/yuchen/.npm/ffi/1.2.5/package/package.json written
+80 silly install resolved [ { name: 'ffi',
+80 silly install resolved     version: '1.2.5',
+80 silly install resolved     authors:
+80 silly install resolved      [ 'Rick Branson',
+80 silly install resolved        'Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)' ],
+80 silly install resolved     description: 'A foreign function interface (FFI) for Node.js',
+80 silly install resolved     homepage: 'http://github.com/rbranson/node-ffi',
+80 silly install resolved     engines: { node: '>=0.6.0' },
+80 silly install resolved     main: './lib/ffi',
+80 silly install resolved     dependencies: { bindings: '*', debug: '*', ref: '*', 'ref-struct': '*' },
+80 silly install resolved     devDependencies: { 'expect.js': '*', mocha: '*', 'ref-array': '*' },
+80 silly install resolved     scripts:
+80 silly install resolved      { test: 'node-gyp rebuild --directory test && mocha -gc --reporter spec',
+80 silly install resolved        install: 'node-gyp rebuild' },
+80 silly install resolved     repository: { type: 'git', url: 'http://github.com/rbranson/node-ffi.git' },
+80 silly install resolved     bugs: { url: 'http://github.com/rbranson/node-ffi/issues' },
+80 silly install resolved     gypfile: true,
+80 silly install resolved     _id: 'ffi@1.2.5',
+80 silly install resolved     dist:
+80 silly install resolved      { shasum: 'fb2bb328d40a396d5922c34e043e71d2f12a0e2d',
+80 silly install resolved        tarball: 'http://registry.npmjs.org/ffi/-/ffi-1.2.5.tgz' },
+80 silly install resolved     _from: 'ffi@1.2.5',
+80 silly install resolved     _npmVersion: '1.2.17',
+80 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+80 silly install resolved     maintainers: [ [Object] ],
+80 silly install resolved     directories: {},
+80 silly install resolved     _shasum: 'fb2bb328d40a396d5922c34e043e71d2f12a0e2d',
+80 silly install resolved     _resolved: 'https://registry.npmjs.org/ffi/-/ffi-1.2.5.tgz',
+80 silly install resolved     readme: 'ERROR: No README data found!' } ]
+81 info install ffi@1.2.5 into /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+82 info installOne ffi@1.2.5
+83 verbose installOne of ffi to /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync not in flight; installing
+84 verbose lock using /Users/yuchen/.npm/_locks/ffi-e5099133e11dd80d.lock for /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+85 silly install write writing ffi 1.2.5 to /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+86 silly cache addNamed cb ffi@1.2.5
+87 verbose unbuild node_modules/exec-sync/node_modules/ffi
+88 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+89 verbose tar unpack /Users/yuchen/.npm/ffi/1.2.5/package.tgz
+90 verbose tar unpacking to /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+91 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+92 silly gunzTarPerm modes [ '755', '644' ]
+93 silly gunzTarPerm extractEntry package.json
+94 silly gunzTarPerm extractEntry .npmignore
+95 silly gunzTarPerm extractEntry README.md
+96 silly gunzTarPerm extractEntry LICENSE
+97 silly gunzTarPerm extractEntry test2.js
+98 silly gunzTarPerm extractEntry test.js
+99 silly gunzTarPerm extractEntry binding.gyp
+100 silly gunzTarPerm extractEntry deps/dlfcn-win32/README
+101 silly gunzTarPerm extractEntry deps/dlfcn-win32/COPYING
+102 silly gunzTarPerm extractEntry deps/dlfcn-win32/configure
+103 silly gunzTarPerm extractEntry deps/dlfcn-win32/dlfcn.c
+104 silly gunzTarPerm extractEntry deps/dlfcn-win32/dlfcn.gyp
+105 silly gunzTarPerm extractEntry deps/dlfcn-win32/dlfcn.h
+106 silly gunzTarPerm extractEntry deps/dlfcn-win32/test.c
+107 silly gunzTarPerm extractEntry deps/dlfcn-win32/testdll.c
+108 silly gunzTarPerm extractEntry deps/libffi/.npmignore
+109 silly gunzTarPerm extractEntry deps/libffi/README
+110 silly gunzTarPerm extractEntry deps/libffi/LICENSE
+111 silly gunzTarPerm extractEntry deps/libffi/ChangeLog.libgcj
+112 silly gunzTarPerm extractEntry deps/libffi/ChangeLog.v1
+113 silly gunzTarPerm extractEntry deps/libffi/texinfo.tex
+114 silly gunzTarPerm extractEntry deps/libffi/Makefile.am
+115 silly gunzTarPerm extractEntry deps/libffi/Makefile.in
+116 silly gunzTarPerm extractEntry deps/libffi/ChangeLog.libffi
+117 silly gunzTarPerm extractEntry deps/libffi/acinclude.m4
+118 silly gunzTarPerm extractEntry deps/libffi/aclocal.m4
+119 silly gunzTarPerm extractEntry deps/libffi/closure.c
+120 silly gunzTarPerm extractEntry deps/libffi/compile
+121 silly gunzTarPerm extractEntry deps/libffi/config/README
+122 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/ia32/ffi.h
+123 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/ia32/fficonfig.h
+124 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/ia32/ffitarget.h
+125 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/x64/ffi.h
+126 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/x64/fficonfig.h
+127 silly gunzTarPerm extractEntry deps/libffi/config/freebsd/x64/ffitarget.h
+128 silly gunzTarPerm extractEntry deps/libffi/config/linux/arm/ffi.h
+129 silly gunzTarPerm extractEntry deps/libffi/config/linux/arm/fficonfig.h
+130 silly gunzTarPerm extractEntry deps/libffi/config/linux/arm/ffitarget.h
+131 silly gunzTarPerm extractEntry deps/libffi/config/linux/arm/flags.txt
+132 silly gunzTarPerm extractEntry deps/libffi/config/linux/ia32/ffi.h
+133 silly gunzTarPerm extractEntry deps/libffi/config/linux/ia32/fficonfig.h
+134 silly gunzTarPerm extractEntry deps/libffi/config/linux/ia32/ffitarget.h
+135 silly gunzTarPerm extractEntry deps/libffi/config/linux/ia32/flags.txt
+136 silly gunzTarPerm extractEntry deps/libffi/config/linux/x64/ffi.h
+137 silly gunzTarPerm extractEntry deps/libffi/config/linux/x64/fficonfig.h
+138 silly gunzTarPerm extractEntry deps/libffi/config/linux/x64/ffitarget.h
+139 silly gunzTarPerm extractEntry deps/libffi/config/linux/x64/flags.txt
+140 silly gunzTarPerm extractEntry deps/libffi/config/mac/ia32/ffi.h
+141 silly gunzTarPerm extractEntry deps/libffi/config/mac/ia32/fficonfig.h
+142 silly gunzTarPerm extractEntry deps/libffi/config/mac/ia32/ffitarget.h
+143 silly gunzTarPerm extractEntry deps/libffi/config/mac/ia32/flags.txt
+144 silly gunzTarPerm extractEntry deps/libffi/config/mac/x64/ffi.h
+145 silly gunzTarPerm extractEntry deps/libffi/config/mac/x64/fficonfig.h
+146 silly gunzTarPerm extractEntry deps/libffi/config/mac/x64/ffitarget.h
+147 silly gunzTarPerm extractEntry deps/libffi/config/mac/x64/flags.txt
+148 silly gunzTarPerm extractEntry deps/libffi/config/solaris/ia32/ffi.h
+149 silly gunzTarPerm extractEntry deps/libffi/config/solaris/ia32/fficonfig.h
+150 silly gunzTarPerm extractEntry deps/libffi/config/solaris/ia32/ffitarget.h
+151 silly gunzTarPerm extractEntry deps/libffi/config/solaris/ia32/flags.txt
+152 silly gunzTarPerm extractEntry deps/libffi/config/solaris/x64/ffi.h
+153 silly gunzTarPerm extractEntry deps/libffi/config/solaris/x64/fficonfig.h
+154 silly gunzTarPerm extractEntry deps/libffi/config/solaris/x64/ffitarget.h
+155 silly gunzTarPerm extractEntry deps/libffi/config/solaris/x64/flags.txt
+156 silly gunzTarPerm extractEntry deps/libffi/config/win/ia32/ffi.h
+157 silly gunzTarPerm extractEntry deps/libffi/config/win/ia32/fficonfig.h
+158 silly gunzTarPerm extractEntry deps/libffi/config/win/ia32/ffitarget.h
+159 silly gunzTarPerm extractEntry deps/libffi/config/win/ia32/flags.txt
+160 silly gunzTarPerm extractEntry deps/libffi/config/win/x64/ffi.h
+161 silly gunzTarPerm extractEntry deps/libffi/config/win/x64/fficonfig.h
+162 silly gunzTarPerm extractEntry deps/libffi/config/win/x64/ffitarget.h
+163 silly gunzTarPerm extractEntry deps/libffi/config.guess
+164 silly gunzTarPerm extractEntry deps/libffi/config.sub
+165 silly gunzTarPerm extractEntry deps/libffi/configure
+166 silly gunzTarPerm extractEntry deps/libffi/configure.ac
+167 silly gunzTarPerm extractEntry deps/libffi/configure.host
+168 silly gunzTarPerm extractEntry deps/libffi/depcomp
+169 silly gunzTarPerm extractEntry deps/libffi/ChangeLog
+170 silly gunzTarPerm extractEntry deps/libffi/fficonfig.h.in
+171 silly gunzTarPerm extractEntry deps/libffi/generate-ios-source-and-headers.py
+172 silly gunzTarPerm extractEntry deps/libffi/generate-osx-source-and-headers.py
+173 silly gunzTarPerm extractEntry deps/libffi/include/Makefile.am
+174 silly gunzTarPerm extractEntry deps/libffi/include/Makefile.in
+175 silly gunzTarPerm extractEntry deps/libffi/include/ffi.h.in
+176 silly gunzTarPerm extractEntry deps/libffi/include/ffi_common.h
+177 silly gunzTarPerm extractEntry deps/libffi/install-sh
+178 silly gunzTarPerm extractEntry deps/libffi/libffi.gyp
+179 silly gunzTarPerm extractEntry deps/libffi/libffi.pc.in
+180 silly gunzTarPerm extractEntry deps/libffi/libffi.xcodeproj/project.pbxproj
+181 silly gunzTarPerm extractEntry deps/libffi/libtool-version
+182 silly gunzTarPerm extractEntry deps/libffi/ltmain.sh
+183 silly gunzTarPerm extractEntry deps/libffi/m4/ax_gcc_archflag.m4
+184 silly gunzTarPerm extractEntry deps/libffi/m4/asmcfi.m4
+185 silly gunzTarPerm extractEntry deps/libffi/m4/ax_cflags_warn_all.m4
+186 silly gunzTarPerm extractEntry deps/libffi/m4/ax_compiler_vendor.m4
+187 silly gunzTarPerm extractEntry deps/libffi/m4/ax_configure_args.m4
+188 silly gunzTarPerm extractEntry deps/libffi/m4/ax_enable_builddir.m4
+189 silly gunzTarPerm extractEntry deps/libffi/m4/ax_cc_maxopt.m4
+190 silly gunzTarPerm extractEntry deps/libffi/m4/ax_gcc_x86_cpuid.m4
+191 silly gunzTarPerm extractEntry deps/libffi/m4/libtool.m4
+192 silly gunzTarPerm extractEntry deps/libffi/m4/ltoptions.m4
+193 silly gunzTarPerm extractEntry deps/libffi/m4/ltsugar.m4
+194 silly gunzTarPerm extractEntry deps/libffi/m4/ltversion.m4
+195 silly gunzTarPerm extractEntry deps/libffi/m4/lt~obsolete.m4
+196 silly gunzTarPerm extractEntry deps/libffi/man/Makefile.am
+197 silly gunzTarPerm extractEntry deps/libffi/man/Makefile.in
+198 silly gunzTarPerm extractEntry deps/libffi/man/ffi.3
+199 silly gunzTarPerm extractEntry deps/libffi/man/ffi_call.3
+200 silly gunzTarPerm extractEntry deps/libffi/man/ffi_prep_cif.3
+201 silly gunzTarPerm extractEntry deps/libffi/man/ffi_prep_cif_var.3
+202 silly gunzTarPerm extractEntry deps/libffi/mdate-sh
+203 silly gunzTarPerm extractEntry deps/libffi/missing
+204 silly gunzTarPerm extractEntry deps/libffi/msvcc.sh
+205 silly gunzTarPerm extractEntry deps/libffi/src/mips/ffi.c
+206 silly gunzTarPerm extractEntry deps/libffi/src/mips/ffitarget.h
+207 silly gunzTarPerm extractEntry deps/libffi/src/mips/n32.S
+208 silly gunzTarPerm extractEntry deps/libffi/src/mips/o32.S
+209 silly gunzTarPerm extractEntry deps/libffi/src/alpha/ffi.c
+210 silly gunzTarPerm extractEntry deps/libffi/src/alpha/ffitarget.h
+211 silly gunzTarPerm extractEntry deps/libffi/src/alpha/osf.S
+212 silly gunzTarPerm extractEntry deps/libffi/src/avr32/ffi.c
+213 silly gunzTarPerm extractEntry deps/libffi/src/avr32/ffitarget.h
+214 silly gunzTarPerm extractEntry deps/libffi/src/avr32/sysv.S
+215 silly gunzTarPerm extractEntry deps/libffi/src/closures.c
+216 silly gunzTarPerm extractEntry deps/libffi/src/cris/ffi.c
+217 silly gunzTarPerm extractEntry deps/libffi/src/cris/ffitarget.h
+218 silly gunzTarPerm extractEntry deps/libffi/src/cris/sysv.S
+219 silly gunzTarPerm extractEntry deps/libffi/src/debug.c
+220 silly gunzTarPerm extractEntry deps/libffi/src/dlmalloc.c
+221 silly gunzTarPerm extractEntry deps/libffi/src/frv/eabi.S
+222 silly gunzTarPerm extractEntry deps/libffi/src/frv/ffi.c
+223 silly gunzTarPerm extractEntry deps/libffi/src/frv/ffitarget.h
+224 silly gunzTarPerm extractEntry deps/libffi/src/ia64/ffi.c
+225 silly gunzTarPerm extractEntry deps/libffi/src/ia64/ffitarget.h
+226 silly gunzTarPerm extractEntry deps/libffi/src/ia64/ia64_flags.h
+227 silly gunzTarPerm extractEntry deps/libffi/src/ia64/unix.S
+228 silly gunzTarPerm extractEntry deps/libffi/src/java_raw_api.c
+229 silly gunzTarPerm extractEntry deps/libffi/src/m32r/ffi.c
+230 silly gunzTarPerm extractEntry deps/libffi/src/m32r/ffitarget.h
+231 silly gunzTarPerm extractEntry deps/libffi/src/m32r/sysv.S
+232 silly gunzTarPerm extractEntry deps/libffi/src/m68k/ffi.c
+233 silly gunzTarPerm extractEntry deps/libffi/src/m68k/ffitarget.h
+234 silly gunzTarPerm extractEntry deps/libffi/src/m68k/sysv.S
+235 silly gunzTarPerm extractEntry deps/libffi/src/arm/ffi.c
+236 silly gunzTarPerm extractEntry deps/libffi/src/arm/ffitarget.h
+237 silly gunzTarPerm extractEntry deps/libffi/src/arm/gentramp.sh
+238 silly gunzTarPerm extractEntry deps/libffi/src/arm/sysv.S
+239 silly gunzTarPerm extractEntry deps/libffi/src/arm/trampoline.S
+240 silly gunzTarPerm extractEntry deps/libffi/src/moxie/eabi.S
+241 silly gunzTarPerm extractEntry deps/libffi/src/moxie/ffi.c
+242 silly gunzTarPerm extractEntry deps/libffi/src/pa/ffi.c
+243 silly gunzTarPerm extractEntry deps/libffi/src/pa/ffitarget.h
+244 silly gunzTarPerm extractEntry deps/libffi/src/pa/hpux32.S
+245 silly gunzTarPerm extractEntry deps/libffi/src/pa/linux.S
+246 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/ffi_darwin.c
+247 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/aix.S
+248 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/asm.h
+249 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/darwin.S
+250 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/darwin_closure.S
+251 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/ffi.c
+252 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/aix_closure.S
+253 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/ffitarget.h
+254 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/linux64.S
+255 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/linux64_closure.S
+256 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/ppc_closure.S
+257 silly gunzTarPerm extractEntry deps/libffi/src/powerpc/sysv.S
+258 silly gunzTarPerm extractEntry deps/libffi/src/prep_cif.c
+259 silly gunzTarPerm extractEntry deps/libffi/src/raw_api.c
+260 silly gunzTarPerm extractEntry deps/libffi/src/s390/ffi.c
+261 silly gunzTarPerm extractEntry deps/libffi/src/s390/ffitarget.h
+262 silly gunzTarPerm extractEntry deps/libffi/src/s390/sysv.S
+263 silly gunzTarPerm extractEntry deps/libffi/src/sh/ffi.c
+264 silly gunzTarPerm extractEntry deps/libffi/src/sh/ffitarget.h
+265 silly gunzTarPerm extractEntry deps/libffi/src/sh/sysv.S
+266 silly gunzTarPerm extractEntry deps/libffi/src/sh64/ffi.c
+267 silly gunzTarPerm extractEntry deps/libffi/src/sh64/ffitarget.h
+268 silly gunzTarPerm extractEntry deps/libffi/src/sh64/sysv.S
+269 silly gunzTarPerm extractEntry deps/libffi/src/sparc/ffi.c
+270 silly gunzTarPerm extractEntry deps/libffi/src/sparc/ffitarget.h
+271 silly gunzTarPerm extractEntry deps/libffi/src/sparc/v8.S
+272 silly gunzTarPerm extractEntry deps/libffi/src/sparc/v9.S
+273 silly gunzTarPerm extractEntry deps/libffi/src/types.c
+274 silly gunzTarPerm extractEntry deps/libffi/src/x86/sysv.S
+275 silly gunzTarPerm extractEntry deps/libffi/src/x86/darwin.S
+276 silly gunzTarPerm extractEntry deps/libffi/src/x86/ffi.c
+277 silly gunzTarPerm extractEntry deps/libffi/src/x86/ffi64.c
+278 silly gunzTarPerm extractEntry deps/libffi/src/x86/ffitarget.h
+279 silly gunzTarPerm extractEntry deps/libffi/src/x86/freebsd.S
+280 silly gunzTarPerm extractEntry deps/libffi/src/x86/darwin64.S
+281 silly gunzTarPerm extractEntry deps/libffi/src/x86/unix64.S
+282 silly gunzTarPerm extractEntry deps/libffi/src/x86/win32.S
+283 silly gunzTarPerm extractEntry deps/libffi/src/x86/win32.asm
+284 silly gunzTarPerm extractEntry deps/libffi/src/x86/win64.S
+285 silly gunzTarPerm extractEntry deps/libffi/src/x86/win64.asm
+286 silly gunzTarPerm extractEntry deps/libffi/test.c
+287 silly gunzTarPerm extractEntry deps/libffi/testsuite/Makefile.am
+288 silly gunzTarPerm extractEntry deps/libffi/testsuite/Makefile.in
+289 silly gunzTarPerm extractEntry deps/libffi/testsuite/config/default.exp
+290 silly gunzTarPerm extractEntry deps/libffi/testsuite/lib/libffi.exp
+291 silly gunzTarPerm extractEntry deps/libffi/testsuite/lib/target-libpath.exp
+292 silly gunzTarPerm extractEntry deps/libffi/testsuite/lib/wrapper.exp
+293 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_ulonglong.c
+294 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/a.out
+295 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn0.c
+296 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn1.c
+297 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn2.c
+298 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn3.c
+299 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn4.c
+300 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn5.c
+301 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_fn6.c
+302 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_loc_fn0.c
+303 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_stdcall.c
+304 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/closure_thiscall.c
+305 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_12byte.c
+306 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_16byte.c
+307 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_18byte.c
+308 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_19byte.c
+309 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_1_1byte.c
+310 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_20byte.c
+311 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_20byte1.c
+312 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_24byte.c
+313 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_2byte.c
+314 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_3_1byte.c
+315 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_3byte1.c
+316 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_3byte2.c
+317 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_4_1byte.c
+318 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_4byte.c
+319 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_5_1_byte.c
+320 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_5byte.c
+321 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_64byte.c
+322 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_6_1_byte.c
+323 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_6byte.c
+324 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_7_1_byte.c
+325 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_7byte.c
+326 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_8byte.c
+327 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_9byte1.c
+328 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_9byte2.c
+329 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_double.c
+330 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_float.c
+331 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_longdouble.c
+332 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_longdouble_split.c
+333 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_longdouble_split2.c
+334 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_pointer.c
+335 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_sint16.c
+336 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_sint32.c
+337 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_sint64.c
+338 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_uint16.c
+339 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_uint32.c
+340 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_align_uint64.c
+341 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_dbls_struct.c
+342 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_double.c
+343 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_double_va.c
+344 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_float.c
+345 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_longdouble.c
+346 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_longdouble_va.c
+347 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_schar.c
+348 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_sshort.c
+349 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_sshortchar.c
+350 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_uchar.c
+351 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_ushort.c
+352 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_multi_ushortchar.c
+353 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_pointer.c
+354 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_pointer_stack.c
+355 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_schar.c
+356 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_sint.c
+357 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_sshort.c
+358 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_uchar.c
+359 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_uint.c
+360 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/call.exp
+361 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/cls_ushort.c
+362 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/err_bad_abi.c
+363 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/err_bad_typedef.c
+364 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/fastthis1_win32.c
+365 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/fastthis2_win32.c
+366 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/fastthis3_win32.c
+367 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/ffitest.h
+368 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float.c
+369 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float1.c
+370 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float2.c
+371 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float3.c
+372 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float4.c
+373 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/float_va.c
+374 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/huge_struct.c
+375 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/many.c
+376 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/many2.c
+377 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/many2_win32.c
+378 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/many_win32.c
+379 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/negint.c
+380 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct.c
+381 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct1.c
+382 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct10.c
+383 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct2.c
+384 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct3.c
+385 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct4.c
+386 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct5.c
+387 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct6.c
+388 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct7.c
+389 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct8.c
+390 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/nested_struct9.c
+391 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/problem1.c
+392 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/promotion.c
+393 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/pyobjc-tc.c
+394 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_dbl.c
+395 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_dbl1.c
+396 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_dbl2.c
+397 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_fl.c
+398 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_fl1.c
+399 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_fl2.c
+400 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_fl3.c
+401 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_ldl.c
+402 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_ll.c
+403 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_ll1.c
+404 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_sc.c
+405 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_sl.c
+406 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_uc.c
+407 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/return_ul.c
+408 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/stret_large.c
+409 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/stret_large2.c
+410 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/stret_medium.c
+411 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/stret_medium2.c
+412 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/strlen.c
+413 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/strlen2_win32.c
+414 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/strlen_win32.c
+415 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct1.c
+416 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct1_win32.c
+417 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct2.c
+418 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct2_win32.c
+419 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct3.c
+420 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct4.c
+421 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct5.c
+422 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct6.c
+423 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct7.c
+424 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct8.c
+425 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/struct9.c
+426 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.call/testclosure.c
+427 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.special/ffitestcxx.h
+428 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.special/special.exp
+429 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.special/unwindtest.cc
+430 silly gunzTarPerm extractEntry deps/libffi/testsuite/libffi.special/unwindtest_ffi_call.cc
+431 silly gunzTarPerm extractEntry deps/libffi/doc/libffi.info
+432 silly gunzTarPerm extractEntry deps/libffi/doc/libffi.texi
+433 silly gunzTarPerm extractEntry deps/libffi/doc/stamp-vti
+434 silly gunzTarPerm extractEntry deps/libffi/doc/version.texi
+435 silly gunzTarPerm extractEntry deps/pthreads-win32/README
+436 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_consistent.c
+437 silly gunzTarPerm extractEntry deps/pthreads-win32/Bmakefile
+438 silly gunzTarPerm extractEntry deps/pthreads-win32/CONTRIBUTORS
+439 silly gunzTarPerm extractEntry deps/pthreads-win32/COPYING
+440 silly gunzTarPerm extractEntry deps/pthreads-win32/COPYING.LIB
+441 silly gunzTarPerm extractEntry deps/pthreads-win32/ChangeLog
+442 silly gunzTarPerm extractEntry deps/pthreads-win32/FAQ
+443 silly gunzTarPerm extractEntry deps/pthreads-win32/GNUmakefile
+444 silly gunzTarPerm extractEntry deps/pthreads-win32/MAINTAINERS
+445 silly gunzTarPerm extractEntry deps/pthreads-win32/Makefile
+446 silly gunzTarPerm extractEntry deps/pthreads-win32/NEWS
+447 silly gunzTarPerm extractEntry deps/pthreads-win32/Nmakefile
+448 silly gunzTarPerm extractEntry deps/pthreads-win32/Nmakefile.tests
+449 silly gunzTarPerm extractEntry deps/pthreads-win32/PROGRESS
+450 silly gunzTarPerm extractEntry deps/pthreads-win32/ANNOUNCE
+451 silly gunzTarPerm extractEntry deps/pthreads-win32/README.Borland
+452 silly gunzTarPerm extractEntry deps/pthreads-win32/README.CV
+453 silly gunzTarPerm extractEntry deps/pthreads-win32/README.NONPORTABLE
+454 silly gunzTarPerm extractEntry deps/pthreads-win32/README.Watcom
+455 silly gunzTarPerm extractEntry deps/pthreads-win32/README.WinCE
+456 silly gunzTarPerm extractEntry deps/pthreads-win32/TODO
+457 silly gunzTarPerm extractEntry deps/pthreads-win32/WinCE-PORT
+458 silly gunzTarPerm extractEntry deps/pthreads-win32/attr.c
+459 silly gunzTarPerm extractEntry deps/pthreads-win32/autostatic.c
+460 silly gunzTarPerm extractEntry deps/pthreads-win32/barrier.c
+461 silly gunzTarPerm extractEntry deps/pthreads-win32/builddmc.bat
+462 silly gunzTarPerm extractEntry deps/pthreads-win32/cancel.c
+463 silly gunzTarPerm extractEntry deps/pthreads-win32/cleanup.c
+464 silly gunzTarPerm extractEntry deps/pthreads-win32/condvar.c
+465 silly gunzTarPerm extractEntry deps/pthreads-win32/config.h
+466 silly gunzTarPerm extractEntry deps/pthreads-win32/context.h
+467 silly gunzTarPerm extractEntry deps/pthreads-win32/create.c
+468 silly gunzTarPerm extractEntry deps/pthreads-win32/dll.c
+469 silly gunzTarPerm extractEntry deps/pthreads-win32/errno.c
+470 silly gunzTarPerm extractEntry deps/pthreads-win32/exit.c
+471 silly gunzTarPerm extractEntry deps/pthreads-win32/fork.c
+472 silly gunzTarPerm extractEntry deps/pthreads-win32/global.c
+473 silly gunzTarPerm extractEntry deps/pthreads-win32/implement.h
+474 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_mutexattr_init.html
+475 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/ChangeLog
+476 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/index.html
+477 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthreadCancelableWait.html
+478 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_attr_init.html
+479 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_attr_setstackaddr.html
+480 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_attr_setstacksize.html
+481 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_barrier_init.html
+482 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_barrier_wait.html
+483 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_barrierattr_init.html
+484 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_barrierattr_setpshared.html
+485 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_cancel.html
+486 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_cleanup_push.html
+487 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_cond_init.html
+488 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_condattr_init.html
+489 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_condattr_setpshared.html
+490 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_create.html
+491 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_delay_np.html
+492 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_detach.html
+493 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_equal.html
+494 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_exit.html
+495 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_getunique_np.html
+496 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_getw32threadhandle_np.html
+497 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_join.html
+498 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_key_create.html
+499 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_kill.html
+500 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_mutex_init.html
+501 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/PortabilityIssues.html
+502 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_mutexattr_setpshared.html
+503 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_num_processors_np.html
+504 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_once.html
+505 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_init.html
+506 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_rdlock.html
+507 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_timedrdlock.html
+508 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_timedwrlock.html
+509 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_unlock.html
+510 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlock_wrlock.html
+511 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlockattr_init.html
+512 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_rwlockattr_setpshared.html
+513 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_self.html
+514 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_setcancelstate.html
+515 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_setcanceltype.html
+516 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_setconcurrency.html
+517 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_setschedparam.html
+518 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_spin_init.html
+519 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_spin_lock.html
+520 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_spin_unlock.html
+521 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_timechange_handler_np.html
+522 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_win32_attach_detach_np.html
+523 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/pthread_win32_test_features_np.html
+524 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/sched_get_priority_max.html
+525 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/sched_getscheduler.html
+526 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/sched_setscheduler.html
+527 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/sched_yield.html
+528 silly gunzTarPerm extractEntry deps/pthreads-win32/manual/sem_init.html
+529 silly gunzTarPerm extractEntry deps/pthreads-win32/misc.c
+530 silly gunzTarPerm extractEntry deps/pthreads-win32/mutex.c
+531 silly gunzTarPerm extractEntry deps/pthreads-win32/need_errno.h
+532 silly gunzTarPerm extractEntry deps/pthreads-win32/nonportable.c
+533 silly gunzTarPerm extractEntry deps/pthreads-win32/private.c
+534 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread.c
+535 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread.dsp
+536 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread.dsw
+537 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread.gyp
+538 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread.h
+539 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_destroy.c
+540 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getdetachstate.c
+541 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getinheritsched.c
+542 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getschedparam.c
+543 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getschedpolicy.c
+544 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getscope.c
+545 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getstackaddr.c
+546 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_getstacksize.c
+547 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_init.c
+548 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setdetachstate.c
+549 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setinheritsched.c
+550 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setschedparam.c
+551 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setschedpolicy.c
+552 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setscope.c
+553 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setstackaddr.c
+554 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_attr_setstacksize.c
+555 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrier_destroy.c
+556 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrier_init.c
+557 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrier_wait.c
+558 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrierattr_destroy.c
+559 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrierattr_getpshared.c
+560 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrierattr_init.c
+561 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_barrierattr_setpshared.c
+562 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_cancel.c
+563 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_cond_destroy.c
+564 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_cond_init.c
+565 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_cond_signal.c
+566 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_cond_wait.c
+567 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_condattr_destroy.c
+568 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_condattr_getpshared.c
+569 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_condattr_init.c
+570 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_condattr_setpshared.c
+571 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_delay_np.c
+572 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_detach.c
+573 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_equal.c
+574 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_exit.c
+575 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_getconcurrency.c
+576 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_getschedparam.c
+577 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_getspecific.c
+578 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_getunique_np.c
+579 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_getw32threadhandle_np.c
+580 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_join.c
+581 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_key_create.c
+582 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_key_delete.c
+583 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_kill.c
+584 silly gunzTarPerm extractEntry deps/pthreads-win32/BUGS
+585 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_destroy.c
+586 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_init.c
+587 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_lock.c
+588 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_timedlock.c
+589 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_trylock.c
+590 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutex_unlock.c
+591 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_destroy.c
+592 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_getkind_np.c
+593 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_getpshared.c
+594 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_getrobust.c
+595 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_gettype.c
+596 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_init.c
+597 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_setkind_np.c
+598 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_setpshared.c
+599 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_setrobust.c
+600 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_mutexattr_settype.c
+601 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_num_processors_np.c
+602 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_once.c
+603 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_destroy.c
+604 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_init.c
+605 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_rdlock.c
+606 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_timedrdlock.c
+607 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_timedwrlock.c
+608 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_tryrdlock.c
+609 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_trywrlock.c
+610 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_unlock.c
+611 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlock_wrlock.c
+612 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlockattr_destroy.c
+613 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlockattr_getpshared.c
+614 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlockattr_init.c
+615 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_rwlockattr_setpshared.c
+616 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_self.c
+617 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_setcancelstate.c
+618 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_setcanceltype.c
+619 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_setconcurrency.c
+620 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_setschedparam.c
+621 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_setspecific.c
+622 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_spin_destroy.c
+623 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_spin_init.c
+624 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_spin_lock.c
+625 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_spin_trylock.c
+626 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_spin_unlock.c
+627 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_testcancel.c
+628 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_timechange_handler_np.c
+629 silly gunzTarPerm extractEntry deps/pthreads-win32/pthread_win32_attach_detach_np.c
+630 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_MCS_lock.c
+631 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_callUserDestroyRoutines.c
+632 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_calloc.c
+633 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_cond_check_need_init.c
+634 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_getprocessors.c
+635 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_is_attr.c
+636 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_mutex_check_need_init.c
+637 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_new.c
+638 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_processInitialize.c
+639 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_processTerminate.c
+640 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_relmillisecs.c
+641 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_reuse.c
+642 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_rwlock_cancelwrwait.c
+643 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_rwlock_check_need_init.c
+644 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_semwait.c
+645 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_spinlock_check_need_init.c
+646 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_threadDestroy.c
+647 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_threadStart.c
+648 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_throw.c
+649 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_timespec.c
+650 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_tkAssocCreate.c
+651 silly gunzTarPerm extractEntry deps/pthreads-win32/ptw32_tkAssocDestroy.c
+652 silly gunzTarPerm extractEntry deps/pthreads-win32/rwlock.c
+653 silly gunzTarPerm extractEntry deps/pthreads-win32/sched.c
+654 silly gunzTarPerm extractEntry deps/pthreads-win32/sched.h
+655 silly gunzTarPerm extractEntry deps/pthreads-win32/sched_get_priority_max.c
+656 silly gunzTarPerm extractEntry deps/pthreads-win32/sched_get_priority_min.c
+657 silly gunzTarPerm extractEntry deps/pthreads-win32/sched_getscheduler.c
+658 silly gunzTarPerm extractEntry deps/pthreads-win32/sched_setscheduler.c
+659 silly gunzTarPerm extractEntry deps/pthreads-win32/sched_yield.c
+660 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_close.c
+661 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_destroy.c
+662 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_getvalue.c
+663 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_init.c
+664 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_open.c
+665 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_post.c
+666 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_post_multiple.c
+667 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_timedwait.c
+668 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_trywait.c
+669 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_unlink.c
+670 silly gunzTarPerm extractEntry deps/pthreads-win32/sem_wait.c
+671 silly gunzTarPerm extractEntry deps/pthreads-win32/semaphore.c
+672 silly gunzTarPerm extractEntry deps/pthreads-win32/semaphore.h
+673 silly gunzTarPerm extractEntry deps/pthreads-win32/signal.c
+674 silly gunzTarPerm extractEntry deps/pthreads-win32/spin.c
+675 silly gunzTarPerm extractEntry deps/pthreads-win32/sync.c
+676 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/README
+677 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/join3.c
+678 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Debug.dsp
+679 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Debug.dsw
+680 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Debug.plg
+681 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Debug.txt
+682 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/GNUmakefile
+683 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Bmakefile
+684 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/README.BENCHTESTS
+685 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/SIZES.GC
+686 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/SIZES.GCE
+687 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/SIZES.VC
+688 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/SIZES.VCE
+689 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/SIZES.VSE
+690 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/Wmakefile
+691 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier1.c
+692 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier2.c
+693 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier3.c
+694 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier4.c
+695 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier5.c
+696 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/barrier6.c
+697 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchlib.c
+698 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest.h
+699 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest1.c
+700 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest2.c
+701 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest3.c
+702 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest4.c
+703 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/benchtest5.c
+704 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel1.c
+705 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel2.c
+706 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel3.c
+707 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel4.c
+708 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel5.c
+709 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel6a.c
+710 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel6d.c
+711 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel7.c
+712 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel8.c
+713 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cancel9.c
+714 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cleanup0.c
+715 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cleanup1.c
+716 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cleanup2.c
+717 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/cleanup3.c
+718 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar1.c
+719 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar1_1.c
+720 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar1_2.c
+721 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar2.c
+722 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar2_1.c
+723 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar3.c
+724 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar3_1.c
+725 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar3_2.c
+726 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar3_3.c
+727 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar4.c
+728 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar5.c
+729 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar6.c
+730 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar7.c
+731 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar8.c
+732 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/condvar9.c
+733 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/context1.c
+734 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/count1.c
+735 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/create1.c
+736 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/create2.c
+737 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/delay1.c
+738 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/delay2.c
+739 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/detach1.c
+740 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/equal1.c
+741 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/errno1.c
+742 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exception1.c
+743 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exception2.c
+744 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exception3.c
+745 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exit1.c
+746 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exit2.c
+747 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exit3.c
+748 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exit4.c
+749 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/exit5.c
+750 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/eyal1.c
+751 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/inherit1.c
+752 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/join0.c
+753 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/join1.c
+754 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/join2.c
+755 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/ChangeLog
+756 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/kill1.c
+757 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/loadfree.c
+758 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex1.c
+759 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex1e.c
+760 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex1n.c
+761 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex1r.c
+762 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex2.c
+763 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex2e.c
+764 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex2r.c
+765 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex3.c
+766 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex3e.c
+767 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex3r.c
+768 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex4.c
+769 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex5.c
+770 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6.c
+771 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6e.c
+772 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6es.c
+773 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6n.c
+774 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6r.c
+775 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6rs.c
+776 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex6s.c
+777 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex7.c
+778 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex7e.c
+779 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex7n.c
+780 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex7r.c
+781 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex8.c
+782 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex8e.c
+783 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex8n.c
+784 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/mutex8r.c
+785 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/once1.c
+786 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/once2.c
+787 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/once3.c
+788 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/once4.c
+789 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/openmp1.c
+790 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/priority1.c
+791 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/priority2.c
+792 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/reuse1.c
+793 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/reuse2.c
+794 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/robust1.c
+795 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/robust2.c
+796 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/robust3.c
+797 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/robust4.c
+798 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/robust5.c
+799 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock1.c
+800 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock2.c
+801 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock2_t.c
+802 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock3.c
+803 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock3_t.c
+804 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock4.c
+805 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock4_t.c
+806 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock5.c
+807 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock5_t.c
+808 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock6.c
+809 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock6_t.c
+810 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock6_t2.c
+811 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock7.c
+812 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/rwlock8.c
+813 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/self1.c
+814 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/self2.c
+815 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore1.c
+816 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore2.c
+817 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore3.c
+818 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore4.c
+819 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore4t.c
+820 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/semaphore5.c
+821 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/sequence1.c
+822 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/sizes.c
+823 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/spin1.c
+824 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/spin2.c
+825 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/spin3.c
+826 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/spin4.c
+827 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/stress1.c
+828 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/test.h
+829 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/tryentercs.c
+830 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/tryentercs2.c
+831 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/tsd1.c
+832 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/tsd2.c
+833 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/valid1.c
+834 silly gunzTarPerm extractEntry deps/pthreads-win32/tests/valid2.c
+835 silly gunzTarPerm extractEntry deps/pthreads-win32/tsd.c
+836 silly gunzTarPerm extractEntry deps/pthreads-win32/version.rc
+837 silly gunzTarPerm extractEntry deps/pthreads-win32/w32_CancelableWait.c
+838 silly gunzTarPerm extractEntry History.md
+839 silly gunzTarPerm extractEntry example/abs.js
+840 silly gunzTarPerm extractEntry example/sqlite.js
+841 silly gunzTarPerm extractEntry example/factorial/README
+842 silly gunzTarPerm extractEntry example/factorial/factorial.js
+843 silly gunzTarPerm extractEntry example/factorial/factorial.c
+844 silly gunzTarPerm extractEntry lib/_foreign_function.js
+845 silly gunzTarPerm extractEntry lib/cif.js
+846 silly gunzTarPerm extractEntry lib/cif_var.js
+847 silly gunzTarPerm extractEntry lib/dynamic_library.js
+848 silly gunzTarPerm extractEntry lib/callback.js
+849 silly gunzTarPerm extractEntry lib/ffi.js
+850 silly gunzTarPerm extractEntry lib/foreign_function.js
+851 silly gunzTarPerm extractEntry lib/foreign_function_var.js
+852 silly gunzTarPerm extractEntry lib/function.js
+853 silly gunzTarPerm extractEntry lib/library.js
+854 silly gunzTarPerm extractEntry lib/bindings.js
+855 silly gunzTarPerm extractEntry lib/type.js
+856 silly gunzTarPerm extractEntry lib/errno.js
+857 silly gunzTarPerm extractEntry .jshintrc
+858 silly gunzTarPerm extractEntry src/callback_info.cc
+859 silly gunzTarPerm extractEntry src/ffi.cc
+860 silly gunzTarPerm extractEntry src/ffi.h
+861 silly gunzTarPerm extractEntry src/threaded_callback_invokation.cc
+862 silly gunzTarPerm extractEntry test/variadic.js
+863 silly gunzTarPerm extractEntry test/cif.js
+864 silly gunzTarPerm extractEntry test/dynamic_library.js
+865 silly gunzTarPerm extractEntry test/errno.js
+866 silly gunzTarPerm extractEntry test/types.js
+867 silly gunzTarPerm extractEntry test/callback.js
+868 silly gunzTarPerm extractEntry test/function.js
+869 silly gunzTarPerm extractEntry test/library.js
+870 silly gunzTarPerm extractEntry test/objc.js
+871 silly gunzTarPerm extractEntry test/foreign_function.js
+872 silly gunzTarPerm extractEntry test/ffi_tests.cc
+873 silly gunzTarPerm extractEntry test/binding.gyp
+874 silly gunzTarPerm extractEntry .travis.yml
+875 silly gunzTarPerm extractEntry doc/benchmark.js
+876 silly gunzTarPerm extractEntry doc/benchmark.txt
+877 info preinstall ffi@1.2.5
+878 silly prepareForInstallMany adding bindings@* from ffi dependencies
+879 silly prepareForInstallMany adding debug@* from ffi dependencies
+880 silly prepareForInstallMany adding ref@* from ffi dependencies
+881 silly prepareForInstallMany adding ref-struct@* from ffi dependencies
+882 silly cache add args [ 'debug@*', null ]
+883 verbose cache add spec debug@*
+884 silly cache add parsed spec { raw: 'debug@*',
+884 silly cache add   scope: null,
+884 silly cache add   name: 'debug',
+884 silly cache add   rawSpec: '*',
+884 silly cache add   spec: '*',
+884 silly cache add   type: 'range' }
+885 verbose addNamed debug@*
+886 silly addNamed semver.valid null
+887 silly addNamed semver.validRange *
+888 silly addNameRange { name: 'debug', range: '*', hasData: false }
+889 silly mapToRegistry name debug
+890 silly mapToRegistry using default registry
+891 silly mapToRegistry registry https://registry.npmjs.org/
+892 silly mapToRegistry uri https://registry.npmjs.org/debug
+893 verbose addNameRange registry:https://registry.npmjs.org/debug not in flight; fetching
+894 silly cache add args [ 'ref@*', null ]
+895 verbose cache add spec ref@*
+896 silly cache add parsed spec { raw: 'ref@*',
+896 silly cache add   scope: null,
+896 silly cache add   name: 'ref',
+896 silly cache add   rawSpec: '*',
+896 silly cache add   spec: '*',
+896 silly cache add   type: 'range' }
+897 verbose addNamed ref@*
+898 silly addNamed semver.valid null
+899 silly addNamed semver.validRange *
+900 silly addNameRange { name: 'ref', range: '*', hasData: false }
+901 silly mapToRegistry name ref
+902 silly mapToRegistry using default registry
+903 silly mapToRegistry registry https://registry.npmjs.org/
+904 silly mapToRegistry uri https://registry.npmjs.org/ref
+905 verbose addNameRange registry:https://registry.npmjs.org/ref not in flight; fetching
+906 silly cache add args [ 'ref-struct@*', null ]
+907 verbose cache add spec ref-struct@*
+908 silly cache add parsed spec { raw: 'ref-struct@*',
+908 silly cache add   scope: null,
+908 silly cache add   name: 'ref-struct',
+908 silly cache add   rawSpec: '*',
+908 silly cache add   spec: '*',
+908 silly cache add   type: 'range' }
+909 verbose addNamed ref-struct@*
+910 silly addNamed semver.valid null
+911 silly addNamed semver.validRange *
+912 silly addNameRange { name: 'ref-struct', range: '*', hasData: false }
+913 silly mapToRegistry name ref-struct
+914 silly mapToRegistry using default registry
+915 silly mapToRegistry registry https://registry.npmjs.org/
+916 silly mapToRegistry uri https://registry.npmjs.org/ref-struct
+917 verbose addNameRange registry:https://registry.npmjs.org/ref-struct not in flight; fetching
+918 silly cache add args [ 'bindings@*', null ]
+919 verbose cache add spec bindings@*
+920 silly cache add parsed spec { raw: 'bindings@*',
+920 silly cache add   scope: null,
+920 silly cache add   name: 'bindings',
+920 silly cache add   rawSpec: '*',
+920 silly cache add   spec: '*',
+920 silly cache add   type: 'range' }
+921 verbose addNamed bindings@*
+922 silly addNamed semver.valid null
+923 silly addNamed semver.validRange *
+924 silly addNameRange { name: 'bindings', range: '*', hasData: false }
+925 silly mapToRegistry name bindings
+926 silly mapToRegistry using default registry
+927 silly mapToRegistry registry https://registry.npmjs.org/
+928 silly mapToRegistry uri https://registry.npmjs.org/bindings
+929 verbose addNameRange registry:https://registry.npmjs.org/bindings not in flight; fetching
+930 verbose request uri https://registry.npmjs.org/debug
+931 verbose request no auth needed
+932 info attempt registry request try #1 at 13:52:37
+933 verbose etag "E4CY0R7HCWKX9EK7D0X8XLN04"
+934 http request GET https://registry.npmjs.org/debug
+935 verbose request uri https://registry.npmjs.org/ref
+936 verbose request no auth needed
+937 info attempt registry request try #1 at 13:52:37
+938 verbose etag "6S5IZBIJDJ7DVVIODBF3UD6DV"
+939 http request GET https://registry.npmjs.org/ref
+940 verbose request uri https://registry.npmjs.org/ref-struct
+941 verbose request no auth needed
+942 info attempt registry request try #1 at 13:52:37
+943 verbose etag "CNOV638NPP4198T79KE2Z92ZP"
+944 http request GET https://registry.npmjs.org/ref-struct
+945 verbose request uri https://registry.npmjs.org/bindings
+946 verbose request no auth needed
+947 info attempt registry request try #1 at 13:52:37
+948 verbose etag "6SJRISMK25A1UDWM33HHCDB3Q"
+949 http request GET https://registry.npmjs.org/bindings
+950 http 304 https://registry.npmjs.org/debug
+951 silly get cb [ 304,
+951 silly get   { date: 'Sun, 07 Dec 2014 13:52:37 GMT',
+951 silly get     server: 'Apache',
+951 silly get     via: '1.1 varnish',
+951 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:23 GMT',
+951 silly get     'cache-control': 'max-age=60',
+951 silly get     etag: '"E4CY0R7HCWKX9EK7D0X8XLN04"',
+951 silly get     age: '14',
+951 silly get     'x-served-by': 'cache-lcy1122-LCY',
+951 silly get     'x-cache': 'HIT',
+951 silly get     'x-cache-hits': '2',
+951 silly get     'x-timer': 'S1417960357.410088,VS0,VE0',
+951 silly get     vary: 'Accept',
+951 silly get     'content-length': '0',
+951 silly get     'keep-alive': 'timeout=10, max=50',
+951 silly get     connection: 'Keep-Alive' } ]
+952 verbose etag https://registry.npmjs.org/debug from cache
+953 silly addNameRange number 2 { name: 'debug', range: '*', hasData: true }
+954 silly addNameRange versions [ 'debug',
+954 silly addNameRange   [ '0.0.1',
+954 silly addNameRange     '0.1.0',
+954 silly addNameRange     '0.2.0',
+954 silly addNameRange     '0.3.0',
+954 silly addNameRange     '0.4.0',
+954 silly addNameRange     '0.4.1',
+954 silly addNameRange     '0.5.0',
+954 silly addNameRange     '0.6.0',
+954 silly addNameRange     '0.7.0',
+954 silly addNameRange     '0.7.1',
+954 silly addNameRange     '0.7.2',
+954 silly addNameRange     '0.7.3',
+954 silly addNameRange     '0.7.4',
+954 silly addNameRange     '0.8.0',
+954 silly addNameRange     '0.8.1',
+954 silly addNameRange     '1.0.0',
+954 silly addNameRange     '1.0.1',
+954 silly addNameRange     '1.0.2',
+954 silly addNameRange     '1.0.3',
+954 silly addNameRange     '1.0.4',
+954 silly addNameRange     '2.0.0',
+954 silly addNameRange     '2.1.0' ] ]
+955 verbose addNamed debug@2.1.0
+956 silly addNamed semver.valid 2.1.0
+957 silly addNamed semver.validRange 2.1.0
+958 silly mapToRegistry name debug
+959 silly mapToRegistry using default registry
+960 silly mapToRegistry registry https://registry.npmjs.org/
+961 silly mapToRegistry uri https://registry.npmjs.org/debug
+962 verbose addRemoteTarball https://registry.npmjs.org/debug/-/debug-2.1.0.tgz not in flight; adding
+963 verbose addRemoteTarball [ 'https://registry.npmjs.org/debug/-/debug-2.1.0.tgz',
+963 verbose addRemoteTarball   '33ab915659d8c2cc8a41443d94d6ebd37697ed21' ]
+964 info retry fetch attempt 1 at 13:52:37
+965 info attempt registry request try #1 at 13:52:37
+966 http fetch GET https://registry.npmjs.org/debug/-/debug-2.1.0.tgz
+967 http 304 https://registry.npmjs.org/bindings
+968 silly get cb [ 304,
+968 silly get   { date: 'Sun, 07 Dec 2014 13:52:37 GMT',
+968 silly get     server: 'Apache',
+968 silly get     via: '1.1 varnish',
+968 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:37 GMT',
+968 silly get     'cache-control': 'max-age=60',
+968 silly get     etag: '"6SJRISMK25A1UDWM33HHCDB3Q"',
+968 silly get     age: '9',
+968 silly get     'x-served-by': 'cache-lcy1133-LCY',
+968 silly get     'x-cache': 'HIT',
+968 silly get     'x-cache-hits': '1',
+968 silly get     'x-timer': 'S1417960357.444787,VS0,VE0',
+968 silly get     vary: 'Accept',
+968 silly get     'content-length': '0',
+968 silly get     'keep-alive': 'timeout=10, max=50',
+968 silly get     connection: 'Keep-Alive' } ]
+969 verbose etag https://registry.npmjs.org/bindings from cache
+970 silly addNameRange number 2 { name: 'bindings', range: '*', hasData: true }
+971 silly addNameRange versions [ 'bindings',
+971 silly addNameRange   [ '0.0.1',
+971 silly addNameRange     '0.1.0',
+971 silly addNameRange     '0.1.1',
+971 silly addNameRange     '0.2.0',
+971 silly addNameRange     '0.2.1',
+971 silly addNameRange     '0.2.2',
+971 silly addNameRange     '0.2.3',
+971 silly addNameRange     '0.2.4',
+971 silly addNameRange     '0.3.0',
+971 silly addNameRange     '0.4.0',
+971 silly addNameRange     '1.0.0',
+971 silly addNameRange     '1.1.0',
+971 silly addNameRange     '1.1.1',
+971 silly addNameRange     '1.2.0',
+971 silly addNameRange     '1.2.1' ] ]
+972 verbose addNamed bindings@1.2.1
+973 silly addNamed semver.valid 1.2.1
+974 silly addNamed semver.validRange 1.2.1
+975 silly cache afterAdd bindings@1.2.1
+976 verbose afterAdd /Users/yuchen/.npm/bindings/1.2.1/package/package.json not in flight; writing
+977 verbose afterAdd /Users/yuchen/.npm/bindings/1.2.1/package/package.json written
+978 http fetch 200 https://registry.npmjs.org/debug/-/debug-2.1.0.tgz
+979 silly fetchAndShaCheck shasum 33ab915659d8c2cc8a41443d94d6ebd37697ed21
+980 verbose addTmpTarball /var/folders/1l/4rd_dg795n34hsrry55z09_m0000gn/T/npm-364-6a352941/registry.npmjs.org/debug/-/debug-2.1.0.tgz not in flight; adding
+981 verbose addTmpTarball already have metadata; skipping unpack for debug@2.1.0
+982 http 304 https://registry.npmjs.org/ref
+983 silly get cb [ 304,
+983 silly get   { date: 'Sun, 07 Dec 2014 13:52:37 GMT',
+983 silly get     server: 'Apache',
+983 silly get     via: '1.1 varnish',
+983 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:37 GMT',
+983 silly get     'cache-control': 'max-age=60',
+983 silly get     etag: '"6S5IZBIJDJ7DVVIODBF3UD6DV"',
+983 silly get     age: '0',
+983 silly get     'x-served-by': 'cache-lcy1133-LCY',
+983 silly get     'x-cache': 'MISS',
+983 silly get     'x-cache-hits': '0',
+983 silly get     'x-timer': 'S1417960357.445049,VS0,VE357',
+983 silly get     vary: 'Accept',
+983 silly get     'content-length': '0',
+983 silly get     'keep-alive': 'timeout=10, max=50',
+983 silly get     connection: 'Keep-Alive' } ]
+984 verbose etag https://registry.npmjs.org/ref from cache
+985 silly addNameRange number 2 { name: 'ref', range: '*', hasData: true }
+986 silly addNameRange versions [ 'ref',
+986 silly addNameRange   [ '0.0.1',
+986 silly addNameRange     '0.0.2',
+986 silly addNameRange     '0.0.3',
+986 silly addNameRange     '0.0.4',
+986 silly addNameRange     '0.0.5',
+986 silly addNameRange     '0.0.6',
+986 silly addNameRange     '0.0.7',
+986 silly addNameRange     '0.0.8',
+986 silly addNameRange     '0.0.9',
+986 silly addNameRange     '0.0.10',
+986 silly addNameRange     '0.0.11',
+986 silly addNameRange     '0.0.12',
+986 silly addNameRange     '0.0.13',
+986 silly addNameRange     '0.0.14',
+986 silly addNameRange     '0.0.15',
+986 silly addNameRange     '0.0.16',
+986 silly addNameRange     '0.0.17',
+986 silly addNameRange     '0.0.18',
+986 silly addNameRange     '0.0.19',
+986 silly addNameRange     '0.0.20',
+986 silly addNameRange     '0.1.0',
+986 silly addNameRange     '0.1.1',
+986 silly addNameRange     '0.1.2',
+986 silly addNameRange     '0.1.3',
+986 silly addNameRange     '0.2.0',
+986 silly addNameRange     '0.2.1',
+986 silly addNameRange     '0.2.2',
+986 silly addNameRange     '0.2.3',
+986 silly addNameRange     '0.3.0',
+986 silly addNameRange     '0.3.1',
+986 silly addNameRange     '0.3.2' ] ]
+987 verbose addNamed ref@0.3.2
+988 silly addNamed semver.valid 0.3.2
+989 silly addNamed semver.validRange 0.3.2
+990 silly cache afterAdd ref@0.3.2
+991 verbose afterAdd /Users/yuchen/.npm/ref/0.3.2/package/package.json not in flight; writing
+992 verbose afterAdd /Users/yuchen/.npm/ref/0.3.2/package/package.json written
+993 http 304 https://registry.npmjs.org/ref-struct
+994 silly get cb [ 304,
+994 silly get   { date: 'Sun, 07 Dec 2014 13:52:37 GMT',
+994 silly get     server: 'Apache',
+994 silly get     via: '1.1 varnish',
+994 silly get     'last-modified': 'Sun, 07 Dec 2014 13:52:38 GMT',
+994 silly get     'cache-control': 'max-age=60',
+994 silly get     etag: '"CNOV638NPP4198T79KE2Z92ZP"',
+994 silly get     age: '0',
+994 silly get     'x-served-by': 'cache-lcy1127-LCY',
+994 silly get     'x-cache': 'MISS',
+994 silly get     'x-cache-hits': '0',
+994 silly get     'x-timer': 'S1417960357.412250,VS0,VE765',
+994 silly get     vary: 'Accept',
+994 silly get     'content-length': '0',
+994 silly get     'keep-alive': 'timeout=10, max=50',
+994 silly get     connection: 'Keep-Alive' } ]
+995 verbose etag https://registry.npmjs.org/ref-struct from cache
+996 silly addNameRange number 2 { name: 'ref-struct', range: '*', hasData: true }
+997 silly addNameRange versions [ 'ref-struct',
+997 silly addNameRange   [ '0.0.1',
+997 silly addNameRange     '0.0.2',
+997 silly addNameRange     '0.0.3',
+997 silly addNameRange     '0.0.4',
+997 silly addNameRange     '0.0.5',
+997 silly addNameRange     '0.0.6',
+997 silly addNameRange     '0.0.7',
+997 silly addNameRange     '1.0.0' ] ]
+998 verbose addNamed ref-struct@1.0.0
+999 silly addNamed semver.valid 1.0.0
+1000 silly addNamed semver.validRange 1.0.0
+1001 silly cache afterAdd ref-struct@1.0.0
+1002 verbose afterAdd /Users/yuchen/.npm/ref-struct/1.0.0/package/package.json not in flight; writing
+1003 verbose afterAdd /Users/yuchen/.npm/ref-struct/1.0.0/package/package.json written
+1004 verbose about to build /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+1005 verbose unlock done using /Users/yuchen/.npm/_locks/ffi-e5099133e11dd80d.lock for /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+1006 verbose about to build /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+1007 verbose unlock done using /Users/yuchen/.npm/_locks/exec-sync-e22e317252d1962c.lock for /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+1008 verbose stack Error: EACCES, mkdir '/Users/yuchen/.npm/debug/2.1.0'
+1009 verbose cwd /Users/yuchen/IdeaProjects/Comparator
+1010 error Darwin 14.0.0
+1011 error argv "node" "/usr/local/bin/npm" "install" "exec-sync"
+1012 error node v0.10.33
+1013 error npm  v2.1.11
+1014 error path /Users/yuchen/.npm/debug/2.1.0
+1015 error code EACCES
+1016 error errno 3
+1017 error Error: EACCES, mkdir '/Users/yuchen/.npm/debug/2.1.0'
+1017 error  { [Error: EACCES, mkdir '/Users/yuchen/.npm/debug/2.1.0']
+1017 error   errno: 3,
+1017 error   code: 'EACCES',
+1017 error   path: '/Users/yuchen/.npm/debug/2.1.0',
+1017 error   parent: 'ffi' }
+1018 error Please try running this command again as root/Administrator.
+1019 verbose exit [ 3, true ]
+1020 verbose unbuild node_modules/exec-sync/node_modules/ffi
+1021 info preuninstall ffi@1.2.5
+1022 info uninstall ffi@1.2.5
+1023 verbose unbuild rmStuff ffi@1.2.5 from /Users/yuchen/IdeaProjects/Comparator/node_modules
+1024 verbose unbuild rmStuff in /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules
+1025 info postuninstall ffi@1.2.5
+1026 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+1027 silly gentlyRm purging /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules/ffi
+1028 silly gentlyRm removing /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync/node_modules
+1029 silly gentlyRm quitting because other entries in /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+1030 verbose unbuild node_modules/exec-sync
+1031 info preuninstall exec-sync@0.1.6
+1032 info uninstall exec-sync@0.1.6
+1033 verbose unbuild rmStuff exec-sync@0.1.6 from /Users/yuchen/IdeaProjects/Comparator/node_modules
+1034 info postuninstall exec-sync@0.1.6
+1035 verbose gentlyRm vacuuming /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+1036 silly gentlyRm purging /Users/yuchen/IdeaProjects/Comparator/node_modules/exec-sync
+1037 silly gentlyRm removing /Users/yuchen/IdeaProjects/Comparator/node_modules
+1038 silly gentlyRm finished vacuuming up to /Users/yuchen/IdeaProjects/Comparator

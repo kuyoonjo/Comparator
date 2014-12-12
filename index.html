@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/cache.js"></script>
+    <script src="js/measure.js"></script>
+    <script>
+        var perlArea;
+        var pythonArea;
+        var source;
+        function readData(name)
+        {
+            readDataFrom(CODE_DIR + "/" + name + ".pl", function(data) {
+                perlArea.value = data.toString();
+            });
+            readDataFrom(CODE_DIR + "/" + name + ".py", function(data) {
+                pythonArea.value = data.toString();
+            });
+        }
+        $(document).ready(function(){
+            perlArea = document.getElementById("perlCode");
+            pythonArea = document.getElementById("pythonCode");
+            perlResult = document.getElementById("perlResult");
+            pythonResult = document.getElementById("pythonResult");
+
+            $(".codeSelector").click(function(){
+                source = this.value;
+                readData(source);
+            });
+
+            $("#run").click(function(){
+                var cachePerl = CACHE_DIR + "/" + CACHE_PERL;
+                var cachePython = CACHE_DIR + "/" + CACHE_PYTHON;
+                writeDataTo(perlArea.value, cachePerl);
+                writeDataTo(pythonArea.value, cachePython);
+                perlResult.value = '';
+                pythonResult.value = '';
+                measure('perl', cachePerl,
+                        function(data){
+                        },
+                        function(data){
+                            readDataFrom(CACHE_DIR + "/perl.op", function(output) {
+                                perlResult.value = output.toString();
+                                perlResult.value += data;
+                                perlResult.scrollTop = perlResult.scrollHeight;
+                            });
+                            measure('python', cachePython,
+                                    function(data){
+                                    },
+                                    function(data){
+                                        readDataFrom(CACHE_DIR + "/python.op", function(output) {
+                                            pythonResult.value = output.toString();
+                                            pythonResult.value += data;
+                                            pythonResult.scrollTop = pythonResult.scrollHeight;
+                                        });
+                                    },
+                                    function(data){
+                                        pythonResult.value += data;
+                                        pythonResult.scrollTop = pythonResult.scrollHeight;
+                                    });
+                        },
+                        function(data){
+                            perlResult.value += data;
+                            perlResult.scrollTop = perlResult.scrollHeight;
+
+                        });
+
+            });
+
+        });
+    </script>
+    <title>Comparator</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2">
+            Sample:
+            <input type="radio" class="codeSelector" name="group" value="loop"/>loop
+            <input type="radio" class="codeSelector" name="group" value="sort" />sort
+            <button id="run">Run</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Perl:</td>
+        <td>Python:</td>
+    </tr>
+    <tr>
+        <td><textarea class="code" id="perlCode"></textarea></td>
+        <td><textarea class="code" id="pythonCode"></textarea></td>
+    </tr>
+    <tr>
+        <td>Result:</td>
+        <td>Result:</td>
+    </tr>
+    <tr>
+        <td><textarea class="result" id="perlResult" readonly="true"></textarea></td>
+        <td><textarea class="result" id="pythonResult" readonly="true"></textarea></td>
+    </tr>
+</table>
+</body>
+</html>

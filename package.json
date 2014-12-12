@@ -1,0 +1,14 @@
+{
+  "name": "comparator",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "title": "Comparator",
+    "toolbar": false,
+    "frame": true,
+    "width": 840,
+    "height": 620,
+    "resizable": false,
+    "position": "mouse"
+  }
+}
