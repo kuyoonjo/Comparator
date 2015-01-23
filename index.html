@@ -19,54 +19,45 @@
                 pythonArea.value = data.toString();
             });
         }
+        function runCode(lang, cache, source, result, output){
+            writeDataTo(source.value, cache);
+            output.value = '';
+            measure(lang, cache,
+                    function(data){
+                        output.value = data;
+                        output.scrollTop = output.scrollHeight
+                    },
+                    function(data){
+                    },
+                    function(stat, finished, time){
+                        if(!finished) {
+                            result.value = "";
+                            result.value += 'Time: ' + time + "ms\n";
+                            result.value += 'Memory: ' + stat.memory + "\n";
+                            result.value += ' rss: ' + stat.memoryInfo.rss + "\n";
+                            result.value += ' vsize: ' + stat.memoryInfo.vsize + "\n";
+                            result.value += 'CPU: ' + stat.cpu + '%';
+                        }
+                    });
+        }
         $(document).ready(function(){
             perlArea = document.getElementById("perlCode");
             pythonArea = document.getElementById("pythonCode");
             perlResult = document.getElementById("perlResult");
             pythonResult = document.getElementById("pythonResult");
+            perlOutput = document.getElementById("perlOutput");
+            pythonOutput = document.getElementById("pythonOutput");
 
             $(".codeSelector").click(function(){
                 source = this.value;
                 readData(source);
             });
 
-            $("#run").click(function(){
-                var cachePerl = CACHE_DIR + "/" + CACHE_PERL;
-                var cachePython = CACHE_DIR + "/" + CACHE_PYTHON;
-                writeDataTo(perlArea.value, cachePerl);
-                writeDataTo(pythonArea.value, cachePython);
-                perlResult.value = '';
-                pythonResult.value = '';
-                measure('perl', cachePerl,
-                        function(data){
-                        },
-                        function(data){
-                            readDataFrom(CACHE_DIR + "/perl.op", function(output) {
-                                perlResult.value = output.toString();
-                                perlResult.value += data;
-                                perlResult.scrollTop = perlResult.scrollHeight;
-                            });
-                            measure('python', cachePython,
-                                    function(data){
-                                    },
-                                    function(data){
-                                        readDataFrom(CACHE_DIR + "/python.op", function(output) {
-                                            pythonResult.value = output.toString();
-                                            pythonResult.value += data;
-                                            pythonResult.scrollTop = pythonResult.scrollHeight;
-                                        });
-                                    },
-                                    function(data){
-                                        pythonResult.value += data;
-                                        pythonResult.scrollTop = pythonResult.scrollHeight;
-                                    });
-                        },
-                        function(data){
-                            perlResult.value += data;
-                            perlResult.scrollTop = perlResult.scrollHeight;
-
-                        });
-
+            $("#runPerl").click(function(){
+                runCode('perl', CACHE_DIR + '/' + CACHE_PERL, perlArea, perlResult, perlOutput);
+            });
+            $("#runPython").click(function(){
+                runCode('python', CACHE_DIR + '/' + CACHE_PYTHON, pythonArea, pythonResult, pythonOutput);
             });
 
         });
@@ -80,7 +71,6 @@
             Sample:
             <input type="radio" class="codeSelector" name="group" value="loop"/>loop
             <input type="radio" class="codeSelector" name="group" value="sort" />sort
-            <button id="run">Run</button>
         </td>
     </tr>
     <tr>
@@ -92,12 +82,28 @@
         <td><textarea class="code" id="pythonCode"></textarea></td>
     </tr>
     <tr>
+        <td>
+            <button id="runPerl">Run</button>
+        </td>
+        <td>
+            <button id="runPython">Run</button>
+        </td>
+    </tr>
+    <tr>
         <td>Result:</td>
         <td>Result:</td>
     </tr>
     <tr>
         <td><textarea class="result" id="perlResult" readonly="true"></textarea></td>
         <td><textarea class="result" id="pythonResult" readonly="true"></textarea></td>
+    </tr>
+    <tr>
+        <td>Output:</td>
+        <td>Output:</td>
+    </tr>
+    <tr>
+        <td><textarea class="output" id="perlOutput" readonly="true"></textarea></td>
+        <td><textarea class="output" id="pythonOutput" readonly="true"></textarea></td>
     </tr>
 </table>
 </body>

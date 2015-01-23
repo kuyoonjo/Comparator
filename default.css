@@ -1,8 +1,12 @@
 textarea.code {
     width: 300pt;
-    height: 200pt;
+    height: 160pt;
 }
 textarea.result {
     width: 300pt;
-    height: 180pt;
+    height: 50pt;
+}
+textarea.output {
+    width: 300pt;
+    height: 140pt;
 }
