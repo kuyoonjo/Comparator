@@ -1,2 +1,2 @@
-for i in range(100000):
-    print (i)
+for i in range(10000000):
+    pass
