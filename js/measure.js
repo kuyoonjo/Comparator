@@ -7,10 +7,18 @@ function measure(lang, file, succeed, fail, mem) {
     var result = spawn(lang, [file]);
     var finished = false;
     var timer;
-    var time = 0;
+    var startTime = new Date().getTime();
     var usage = require('usage');
     var pid = result.pid;
     var options = { keepHistory: true };
+    var status = {
+        memory:0,
+        cpu:0,
+        memoryInfo:{
+            rss:0,
+            vsize:0
+        }
+    };
 
     result.stdout.on('data', function (data) {
         succeed(data);
@@ -27,9 +35,8 @@ function measure(lang, file, succeed, fail, mem) {
 
     timer = setInterval(function() {
         usage.lookup(pid, options, function (err, stat) {
-            mem(stat, finished, time);
-            time = time + 1;
+            mem(stat, finished, new Date().getTime() - startTime);
         });
-    }, 1);
+    }, 10);
     //usage.clearHistory(pid);
 }

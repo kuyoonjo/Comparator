@@ -28,9 +28,10 @@
                         output.scrollTop = output.scrollHeight
                     },
                     function(data){
+                        console.log(data);
                     },
                     function(stat, finished, time){
-                        if(!finished) {
+                        if(!finished && stat.memory != 0) {
                             result.value = "";
                             result.value += 'Time: ' + time + "ms\n";
                             result.value += 'Memory: ' + stat.memory + "\n";
@@ -70,7 +71,12 @@
         <td colspan="2">
             Sample:
             <input type="radio" class="codeSelector" name="group" value="loop"/>loop
+            <input type="radio" class="codeSelector" name="group" value="while_loop"/>while loop
+            <input type="radio" class="codeSelector" name="group" value="string"/>string
+            <input type="radio" class="codeSelector" name="group" value="search"/>search
             <input type="radio" class="codeSelector" name="group" value="sort" />sort
+            <input type="radio" class="codeSelector" name="group" value="list_push" />list push
+            <input type="radio" class="codeSelector" name="group" value="list_pop" />list pop
         </td>
     </tr>
     <tr>
